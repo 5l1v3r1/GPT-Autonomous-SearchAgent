@@ -1,10 +1,14 @@
 # langchan research agent
+import openai
 from langchain.agents import load_tools
 from langchain.agents import initialize_agent
 from langchain.agents import AgentType
 from langchain.agents import Tool
 from langchain.chat_models import ChatOpenAI
 from langchain.utilities import ArxivAPIWrapper
+
+# Set up the OpenAI API
+openai.api_key = "sk-" # Replace the string content with your OpenAI API key
 
 llm = ChatOpenAI(temperature=0) # Initialize the LLM to be used
 
